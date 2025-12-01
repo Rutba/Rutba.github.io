@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Header Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <h2 class="nav-logo">Rutba Aman</h2>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <!-- PHOTO LEFT + ABOUT RIGHT -->
+    <section class="profile-layout" id="about">
+        <img src="Rutba.jpg" alt="Your Photo" class="profile-photo-side">
+
+        <div class="about-text-side">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                Replace this text with your introduction. Add a short description 
+                about your background, skills, experience, interests, and goals.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="project1.png" class="project-img">
+                <h3>Project Title 1</h3>
+                <p>Short description…</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="project2.png" class="project-img">
+                <h3>Project Title 2</h3>
+                <p>Short description…</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="project3.png" class="project-img">
+                <h3>Project Title 3</h3>
+                <p>Short description…</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="project4.png" class="project-img">
+                <h3>Project Title 4</h3>
+                <p>Short description…</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="publications" id="publications">
+        <h2 class="section-title">Publications</h2>
+
+        <ul>
+            <li>
+                <strong>Publication Title 1</strong> — Journal / Conference  
+                <a href="#" target="_blank">Read</a>
+            </li>
+
+            <li>
+                <strong>Publication Title 2</strong> — Journal / Conference  
+                <a href="#" target="_blank">Read</a>
+            </li>
+
+	     <li>
+                <strong>Publication Title 1</strong> — Journal / Conference  
+                <a href="#" target="_blank">Read</a>
+            </li>
+
+            <li>
+                <strong>Publication Title 2</strong> — Journal / Conference  
+                <a href="#" target="_blank">Read</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="mailto:rutba.aman@gmail.com" class="footer-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/yourprofile" class="footer-icon" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://github.com/Rutba" class="footer-icon" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <p>©Rutba </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

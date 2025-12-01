@@ -1,0 +1,172 @@
+/* Light Theme */
+:root {
+    --bg: #ffffff;
+    --text: #222;
+    --card: #f2f2f2;
+    --accent: #4a73ff;
+}
+
+/* Dark Theme */
+.dark {
+    --bg: #111;
+    --text: #f2f2f2;
+    --card: #1f1f1f;
+    --accent: #6d8cff;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--card);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ---------------- GLOBAL SECTION SPACING ---------------- */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* ---------------- PROFILE LAYOUT (LEFT PHOTO + RIGHT ABOUT) ---------------- */
+.profile-layout {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.profile-photo-side {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about-text-side {
+    max-width: 650px;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* ---------------- PROJECT GRID ---------------- */
+.projects {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 18px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ---------------- PUBLICATIONS ---------------- */
+.publications {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.publications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.publications li {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    background: var(--card);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.footer-icon {
+    font-size: 28px;
+    margin: 0 15px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footer-icon:hover {
+    color: var(--accent);
+}
+
+/* ---------------- RESPONSIVE FIXES ---------------- */
+@media (max-width: 768px) {
+    .profile-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text-side {
+        max-width: 100%;
+    }
+}
