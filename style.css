@@ -133,7 +133,7 @@ section {
 /* Larger project block image */
 .project-img {
     width: 100%;
-    height: 220px;      /* ← Increased height */
+    height: 300px;      /* ← Increased height */
     object-fit: cover;
     border-radius: 8px;
 }
@@ -188,7 +188,7 @@ section {
     margin: 10px 0;
 
     /* Publication font */
-    font-family: "Agency FB", sans-serif;
+    font-family: Agency FB;
     font-size: 20px;
 }
 
@@ -227,3 +227,4 @@ footer {
         max-width: 100%;
     }
 }
+
