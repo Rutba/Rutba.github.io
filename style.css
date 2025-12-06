@@ -64,8 +64,16 @@ body {
     color: var(--accent);
 }
 
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text);
+}
+
 /* ----------------------------------
-   SECTIONS GLOBAL
+   GLOBAL SECTIONS
 ----------------------------------- */
 section {
     max-width: 1000px;
@@ -80,141 +88,27 @@ section {
 }
 
 /* ----------------------------------
-   PROJECT DESCRIPTION
+   ABOUT (PROFILE LAYOUT REMAINS SAME)
 ----------------------------------- */
-.project-description {
-    background: var(--card);
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 25px;
-}
-
-/* ----------------------------------
-   IMAGE ROW FOR PROJECT2
------------------------------------ */
-.image-row {
+.profile-layout {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: nowrap;
-    margin: 25px 0;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-.image-row img {
-    flex: 1 1 0;
-    max-width: 24%;
-    border-radius: 10px;
-    background: var(--card);
-    padding: 5px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.15);
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.image-row img:hover {
-    transform: scale(1.05);
-}
-
-/* ----------------------------------
-   RESPONSIVE IMAGE ROW
------------------------------------ */
-@media (max-width: 1024px) {
-    .image-row img {
-        max-width: 23%;
-    }
-}
-
-@media (max-width: 768px) {
-    .image-row {
-        flex-wrap: wrap;
-    }
-    .image-row img {
-        flex: 1 1 48%;
-        max-width: 48%;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .image-row img {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-
-/* ----------------------------------
-   LIGHTBOX
------------------------------------ */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
+.profile-photo-side {
+    width: 180px;
+    height: 180px;
     border-radius: 12px;
-    object-fit: contain;
-    transition: 0.3s ease;
+    object-fit: cover;
 }
 
-/* Make first image larger when pop-up opens */
-.image-row img:first-child:hover ~ .lightbox .lightbox-content {
-    max-width: 95%;
-    max-height: 95%;
-}
-
-/* Close button */
-.lightbox .close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Next/Prev arrows */
-.lightbox .prev,
-.lightbox .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-    transition: 0.3s;
-    user-select: none;
-}
-
-.lightbox .prev:hover,
-.lightbox .next:hover {
-    color: var(--accent);
-}
-
-.lightbox .prev {
-    left: 10px;
-}
-
-.lightbox .next {
-    right: 10px;
+.about-text-side {
+    max-width: 650px;
 }
 
 /* ----------------------------------
-   PROJECT GRID
+   PROJECT GRID (MAIN PAGE)
 ----------------------------------- */
 .project-grid {
     display: grid;
@@ -222,17 +116,15 @@ section {
     gap: 25px;
 }
 
-/* Entire project block clickable */
 .project-card {
-    display: flex;
-    flex-direction: column;
     background: var(--card);
     border-radius: 12px;
     padding: 18px;
     text-decoration: none;
     color: var(--text);
+    display: flex;
+    flex-direction: column;
     transition: 0.3s ease;
-    cursor: pointer;
 }
 
 .project-card:hover {
@@ -242,35 +134,142 @@ section {
 .project-img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
     border-radius: 8px;
-}
-
-.project-card h3 {
-    margin: 10px 0 4px 0;
-}
-
-.project-card p {
-    margin: 0;
+    object-fit: cover;
 }
 
 /* ----------------------------------
-   CODE BUTTON
+   PROJECT DETAIL PAGE BLOCK
 ----------------------------------- */
-.code-btn {
-    display: inline-block;
-    padding: 10px 18px;
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    margin-top: 15px;
-    transition: 0.3s ease;
+.project-description {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
 }
 
-.code-btn:hover {
-    opacity: 0.85;
+/* ----------------------------------
+   PROJECT1 – FIX IMAGE OUTSIDE BOX
+----------------------------------- */
+.project-description img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    background: var(--card);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    object-fit: contain;
+}
+
+/* Keep image small on small screens */
+@media (max-width: 600px) {
+    .project-description img {
+        max-width: 100%;
+    }
+}
+
+/* ----------------------------------
+   PROJECT2 – FOUR IMAGES ROW
+----------------------------------- */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+.image-row img {
+    flex: 1 1 0;
+    max-width: 24%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--card);
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.image-row img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-row {
+        flex-wrap: wrap;
+    }
+    .image-row img {
+        max-width: 48%;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-row img {
+        max-width: 100%;
+        height: 150px;
+    }
+}
+
+/* ----------------------------------
+   PROJECT2 – LIGHTBOX POPUP
+----------------------------------- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px;
+}
+
+.lightbox .prev {
+    left: 20px;
+}
+
+.lightbox .next {
+    right: 20px;
+}
+
+.lightbox .prev:hover,
+.lightbox .next:hover {
+    color: var(--accent);
 }
 
 /* ----------------------------------
@@ -312,21 +311,12 @@ footer {
 }
 
 /* ----------------------------------
-   RESPONSIVE GENERAL
+   RESPONSIVE GLOBAL
 ----------------------------------- */
 @media (max-width: 768px) {
     .profile-layout {
         flex-direction: column;
-        align-items: center;
         text-align: center;
+        align-items: center;
     }
-
-    .about-text-side {
-        max-width: 100%;
-    }
-}
-
-/* Optional: Slight dim in dark mode */
-.dark .project-description img {
-    filter: brightness(0.92);
 }
