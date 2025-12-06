@@ -177,23 +177,24 @@ section {
     transform: scale(1.03);
 }
 
-/* Three images in a row */
+/* Three images in a single row */
 .three-images {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     margin: 25px 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* ensures images stay in one row */
 }
 
 .three-images img {
-    width: 32%;
-    max-width: 200px;
+    flex: 1;           /* evenly distribute space */
+    max-width: 32%;    /* roughly one-third of container */
     border-radius: 10px;
     background: var(--card);
     padding: 5px;
     box-shadow: 0 0 8px rgba(0,0,0,0.15);
     transition: filter 0.3s ease, transform 0.3s ease;
+    object-fit: cover;
 }
 
 .three-images img:hover {
@@ -269,8 +270,14 @@ footer {
         max-width: 100%;
     }
 
+    .three-images {
+        flex-wrap: wrap;       /* allow wrapping on small screens */
+        gap: 10px;
+    }
+
     .three-images img {
-        width: 48%; /* stack 2 in a row on small screens */
+        flex: 1 1 48%;         /* two images per row on mobile */
+        max-width: 48%;
         margin-bottom: 10px;
     }
 
