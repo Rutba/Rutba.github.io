@@ -122,8 +122,6 @@ section {
     color: var(--text);
     transition: 0.3s ease;
     cursor: pointer;
-
-    /* RESTORED: NO FIXED HEIGHT */
 }
 
 .project-card:hover {
@@ -133,7 +131,7 @@ section {
 /* Larger project block image */
 .project-img {
     width: 100%;
-    height: 300px;      /* ← Increased height */
+    height: 300px;      
     object-fit: cover;
     border-radius: 8px;
 }
@@ -148,13 +146,58 @@ section {
 }
 
 /* ----------------------------------
-   PROJECT DETAIL PAGE
+   PROJECT DESCRIPTION
 ----------------------------------- */
 .project-description {
     background: var(--card);
     padding: 25px;
     border-radius: 12px;
     margin-top: 25px;
+}
+
+/* Single summary image, smaller and centered */
+.summary-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.summary-image img {
+    width: 60%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    background: var(--card);
+    padding: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.summary-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Three images in a row */
+.three-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.three-images img {
+    width: 32%;
+    max-width: 200px;
+    border-radius: 10px;
+    background: var(--card);
+    padding: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.three-images img:hover {
+    transform: scale(1.05);
 }
 
 /* Code Button */
@@ -187,8 +230,6 @@ section {
     padding: 15px;
     border-radius: 10px;
     margin: 10px 0;
-
-    /* Publication font */
     font-family: Agency FB;
     font-size: 20px;
 }
@@ -227,6 +268,15 @@ footer {
     .about-text-side {
         max-width: 100%;
     }
+
+    .three-images img {
+        width: 48%; /* stack 2 in a row on small screens */
+        margin-bottom: 10px;
+    }
+
+    .summary-image img {
+        width: 80%;
+    }
 }
 
 /* ----------------------------------
@@ -238,18 +288,20 @@ footer {
     height: auto;
     display: block;
     margin-top: 20px;
-
-    /* Makes white images blend with theme */
     background: var(--card);
     padding: 8px;
     border-radius: 10px;
-
-    /* Soft shadow for both themes */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    transition: filter 0.3s ease;
 }
 
-/* Optional: Slight dim in dark mode */
-.dark .project-description img {
-    filter: brightness(0.92);
+/* Dark mode adjustments */
+.dark .project-description img,
+.dark .summary-image img,
+.dark .three-images img {
+    filter: brightness(0.85) contrast(1.1);
 }
 
+.dark .three-images img.light-bg {
+    filter: invert(1) brightness(0.9) contrast(1.05);
+}
