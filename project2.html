@@ -29,10 +29,7 @@
           It cleans and merges multiple datasets, applies PCA to chemical descriptors, performs exploratory data analysis, and builds regression models 
           linking molecular features and participant demographics to odor perception.
         </p>
-        <!-- Single small centered image-->
-        <div class="summary-image">
-          <img  src="olfactory_summary.png" alt= "Olfactory Summary>
-        </div>
+        
         <p>  
           By combining molecular odor properties with human behavioral responses, this project creates a deeper, more human-centered way to detect and 
           understand health conditions. This dual analysis goes beyond smell alone and provides richer insights into neurological, emotional, and physiological 
@@ -46,12 +43,21 @@
             <li>Environmental Monitoring & Safety </li>
             <li>Virtual Reality & Gaming</li>
         </ul>              
-        <!-- Three images in a line -->
-        <div class = "three-images">
-            <img src="z-score.png" alt="Step 1" class="light-bg">
-            <img src="mapping.png" alt="Step 2">
-            <img src="result.png" alt="Step 3" class="light-bg">
-        </div>
+        <!-- Four images in a line -->
+            <div class="image-row">
+                <img src="olfactory_summary.png" alt="Summary" class="gallery-img light-bg">
+                <img src="z-score.png" alt="Step 1" class="gallery-img light-bg">
+                <img src="mapping.png" alt="Step 2" class="gallery-img">
+                <img src="result.png" alt="Step 3" class="gallery-img light-bg">
+            </div>
+            
+            <!-- Lightbox container (one for all images) -->
+            <div id="lightbox" class="lightbox">
+                <span class="close">&times;</span>
+                <img class="lightbox-content" id="lightbox-img">
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
     
         <a href="https://github.com/Rutba/Olfactory_Emotion_Mapping/blob/main/Olfactory_emotion_mapping.ipynb" target="_blank">
             View Code
@@ -88,6 +94,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
