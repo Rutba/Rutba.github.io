@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Olfactory Emotion  – Project</title>
+    <title>Olfactory Emotion – Project</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,30 +11,38 @@
     <!-- NAV BAR -->
     <nav class="navbar">
         <h2 class="nav-logo">Rutba Aman</h2>
-
         <ul class="nav-links">
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#projects">Projects</a></li>
             <li><a href="index.html#publications">Publications</a></li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
         </ul>
-
         <button id="theme-toggle">🌙</button>
     </nav>
 
     <!-- PROJECT DESCRIPTION -->
     <section class="project-description">
         <h2 class="section-title">Olfactory Emotion Mapping</h2>
-        <p>This project integrates chemical structures of odor molecules with human perception ratings to study what makes odors pleasant or intense. 
-          It cleans and merges multiple datasets, applies PCA to chemical descriptors, performs exploratory data analysis, and builds regression models 
-          linking molecular features and participant demographics to odor perception.
+        <p>
+            This project integrates chemical structures of odor molecules with human perception ratings to study what makes odors pleasant or intense. 
+            It cleans and merges multiple datasets, applies PCA to chemical descriptors, performs exploratory data analysis, and builds regression models 
+            linking molecular features and participant demographics to odor perception.
         </p>
-        
-        <p>  
-          By combining molecular odor properties with human behavioral responses, this project creates a deeper, more human-centered way to detect and 
-          understand health conditions. This dual analysis goes beyond smell alone and provides richer insights into neurological, emotional, and physiological 
-          health. It can help:
+
+        <!-- Four images in one row -->
+        <div class="image-row">
+            <img src="olfactory_summary.png" alt="Summary" class="gallery-img light-bg">
+            <img src="z-score.png" alt="Step 1" class="gallery-img light-bg">
+            <img src="mapping.png" alt="Step 2" class="gallery-img">
+            <img src="result.png" alt="Step 3" class="gallery-img light-bg">
+        </div>
+
+        <p>
+            By combining molecular odor properties with human behavioral responses, this project creates a deeper, more human-centered way to detect and 
+            understand health conditions. This dual analysis goes beyond smell alone and provides richer insights into neurological, emotional, and physiological 
+            health. It can help:
         </p>
+
         <ul>
             <li>Early Detection of Neurological Disorders</li>
             <li>Monitoring Mental Health States</li>
@@ -42,37 +50,28 @@
             <li>Smart Homes & Ambient Experience Design </li>
             <li>Environmental Monitoring & Safety </li>
             <li>Virtual Reality & Gaming</li>
-        </ul>              
-        <!-- Four images in a line -->
-            <div class="image-row">
-                <img src="olfactory_summary.png" alt="Summary" class="gallery-img light-bg">
-                <img src="z-score.png" alt="Step 1" class="gallery-img light-bg">
-                <img src="mapping.png" alt="Step 2" class="gallery-img">
-                <img src="result.png" alt="Step 3" class="gallery-img light-bg">
-            </div>
-            
-            <!-- Lightbox container (one for all images) -->
-            <div id="lightbox" class="lightbox">
-                <span class="close">&times;</span>
-                <img class="lightbox-content" id="lightbox-img">
-                <a class="prev">&#10094;</a>
-                <a class="next">&#10095;</a>
-            </div>
-    
-        <a href="https://github.com/Rutba/Olfactory_Emotion_Mapping/blob/main/Olfactory_emotion_mapping.ipynb" target="_blank">
+        </ul>
+
+        <a href="https://github.com/Rutba/Olfactory_Emotion_Mapping/blob/main/Olfactory_emotion_mapping.ipynb" target="_blank" class="code-btn">
             View Code
         </a>
     </section>
 
-    <!-- ALL OTHER PROJECTS BELOW -->
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <!-- OTHER PROJECTS SECTION -->
     <section class="projects">
         <h2 class="section-title">Other Projects</h2>
-
         <div class="project-grid">
-
             <a href="project1.html" class="project-card">
                 <img src="emotion.png" class="project-img">
-                <h3>Emotion Aware virtual mirror</h3>
+                <h3>Emotion Aware Virtual Mirror</h3>
                 <p>Developing tool for emotion understanding.</p>
             </a>
 
@@ -84,29 +83,12 @@
 
             <a href="project4.html" class="project-card">
                 <img src="crop.png" class="project-img">
-                <h3>Crop Recommendation Sytem</h3>
+                <h3>Crop Recommendation System</h3>
                 <p>Short description…</p>
             </a>
-
         </div>
     </section>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
