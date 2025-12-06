@@ -229,4 +229,27 @@ footer {
     }
 }
 
+/* ----------------------------------
+   PROJECT DESCRIPTION IMAGE FIX
+----------------------------------- */
+.project-description img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+
+    /* Makes white images blend with theme */
+    background: var(--card);
+    padding: 8px;
+    border-radius: 10px;
+
+    /* Soft shadow for both themes */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Slight dim in dark mode */
+.dark .project-description img {
+    filter: brightness(0.92);
+}
 
