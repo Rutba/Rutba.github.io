@@ -107,6 +107,10 @@ section {
     max-width: 650px;
 }
 
+.about-text-side p {
+    text-align: justify;
+    line-height: 1.6;
+}
 /* ----------------------------------
    PROJECT GRID (MAIN PAGE)
 ----------------------------------- */
@@ -326,4 +330,5 @@ footer {
         align-items: center;
     }
 }
+
 
