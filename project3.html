@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olfactory EEG – Project</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <h2 class="nav-logo">Rutba Aman</h2>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <!-- PROJECT DESCRIPTION -->
+    <section class="project-description">
+        <h2 class="section-title">Olfactory-Perception-and-EEG-Signal-Correlation</h2>
+        <p>
+          Olfactory dysfunction is an early and prominent marker in neurodegenerative conditions such as Mild Cognitive Impairment (MCI) and Alzheimer’s Disease (AD). Despite its clinical importance, 
+          the neural mechanisms underlying odor perception across different stages of cognitive decline remain incompletely understood. Electroencephalography (EEG), with its high temporal resolution, 
+          offers a non-invasive means to investigate how brain oscillatory activity reflects olfactory processing.
+        </p>
+
+       <p>
+         This project explores the relationship between olfactory perception and EEG spectral dynamics by analyzing EEG responses to two distinct odor stimuli—lemon and rose—across three participant groups: 
+         healthy controls (Normal), MCI, and AD. The primary objective is to quantify odor-related differences in neural oscillations and assess how these differences vary with cognitive status.
+       </p>
+
+        <!-- Three images in one row -->
+        <div class="image-row">
+            <img src="stats.PNG " alt="Summary" class="gallery-img light-bg">
+            <img src="cohens.PNG " alt="Step 1" class="gallery-img light-bg">
+            <img src="eeg-band.PNG " alt="Step 3" class="gallery-img light-bg">
+        </div>
+
+        <p>
+          Using pre-epoched EEG data, the pipeline performs signal preprocessing, frequency filtering, and power spectral density (PSD) estimation via Welch’s method. Band power is extracted across canonical 
+          EEG frequency bands (Delta, Theta, Alpha, Beta, and Gamma) on a per-trial basis and averaged across channels. Within-group paired statistical tests (paired t-tests with Cohen’s d) are used to evaluate 
+          odor-specific effects, while between-group comparisons are conducted using one-way ANOVA to identify disease-related alterations in EEG power.
+        </p>
+       <p>
+         This work demonstrates an end-to-end EEG analysis workflow that integrates signal processing, statistical modeling, and data visualization to investigate sensory–cognitive interactions. The findings 
+         contribute to ongoing research into EEG-based biomarkers for early detection and progression monitoring of neurodegenerative disorders.
+       </p>
+
+        
+        <a href="https://github.com/Rutba/Olfactory-Perception-and-EEG-Signal-Correlation/blob/main/Olfactory-Perception-and-EEG-Signal-Correlation.ipynb" target="_blank">
+            View Code
+        </a>
+    </section>
+
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <!-- OTHER PROJECTS SECTION -->
+    <section class="projects">
+        <h2 class="section-title">Other Projects</h2>
+        <div class="project-grid">
+            <a href="project1.html" class="project-card">
+                <img src="emotion.png" class="project-img">
+                <h3>Emotion Aware Virtual Mirror</h3>
+                <p>Developing tool for emotion understanding.</p>
+            </a>
+
+            <a href="project2.html" class="project-card">
+                <img src="olfactory_emotion.png" class="project-img">
+                <h3>Olfactory Emotion Mapping</h3>
+                <p>Linking Molecules to Mood</p>
+            </a>
+
+            <a href="project4.html" class="project-card">
+                <img src="crop.png" class="project-img">
+                <h3>Crop Recommendation System</h3>
+                <p>Short description…</p>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
