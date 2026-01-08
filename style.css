@@ -289,7 +289,13 @@ section {
     list-style: none;
     padding: 0;
 }
+.publications li a {
+    color: #87CEFA; /* Light Blue */
+}
 
+.publications li a:hover {
+    color: #00BFFF; /* Slightly darker blue on hover */
+}
 .publications li {
     background: var(--card);
     padding: 15px;
@@ -330,5 +336,6 @@ footer {
         align-items: center;
     }
 }
+
 
 
