@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <h2 class="nav-logo">Rutba Aman</h2>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <!-- PROJECT DESCRIPTION -->
+    <section class="project-description">
+        <h2 class="section-title">Crop Recommendation System</h2>
+        <p style="text-align: justify;">
+            Developed an intelligent, AI-powered dashboard designed to assist farmers in making data-driven decisions for improving agricultural productivity. The system empowers farmers to make informed 
+            agricultural decisions by recommending the best crop to plant and detecting crop diseases from leaf images. It integrates user-provided soil data with real-time environmental inputs to deliver 
+            personalized insights that enhance crop yield and reduce losses.
+        </p>
+
+        <!-- Four images in one row -->
+        <div class="image-row">
+            <img src="weather.PNG" alt="Summary" class="gallery-img light-bg">
+            <img src="crop-rec.PNG" alt="Step 1" class="gallery-img light-bg">
+            <img src="plant-d.PNG" alt="Step 2" class="gallery-img">
+            <img src="heatmap.PNG" alt="Step 3" class="gallery-img light-bg">
+        </div>
+
+        <p> <strong> User Interaction & Dashboard Interface:</strong> </p>
+        <ul>
+            <li>Farmers input soil parameters (N, P, K, pH) through a simple form </li>
+            <li>Weather data is filled in automatically via Weather API </li>
+            <li>Leaf image uploads are processed instantly for disease detection </li>
+            <li>The dashboard provides all these insights in an easy-to-understand interface. </li>
+        </ul>
+
+        <p> <strong>Impact & Benefits:</strong> </p>
+        <ul>
+            <li>Helps farmers make data-driven crop choices </li>
+            <li>Reduces crop failure with early disease detection </li>
+            <li>Promotes sustainable and precision farming </li>
+        </ul>
+        
+        <p style="color: red;">🔧 Under Construction; more features will be added.</p>
+
+        <a href="https://github.com/Rutba/Crop_recommendation_system/blob/main/Crop_recommendation_system.ipynb " target="_blank">
+            View Code
+        </a>
+    </section>
+
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <!-- OTHER PROJECTS SECTION -->
+    <section class="projects">
+        <h2 class="section-title">Other Projects</h2>
+        <div class="project-grid">
+            <a href="project1.html" class="project-card">
+                <img src="emotion.png" class="project-img">
+                <h3>Emotion Aware Virtual Mirror</h3>
+                <p>Developing tool for emotion understanding.</p>
+            </a>
+
+            <a href="project2.html" class="project-card">
+                <img src="olfactory_emotion.png" class="project-img">
+                <h3>Olfactory Emotion Mapping</h3>
+                <p>Linking Molecules to Mood</p>
+            </a>
+
+            <a href="project3.html" class="project-card">
+                <img src="olfactory_eeg.png" class="project-img">
+                <h3>Olfactory perception and EEG signal correlation</h3>
+                <p>Cognitive sensory mapping</p>
+            </a>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
